@@ -44,6 +44,12 @@ span {
   padding: 0;
 }
 
+@media screen and (max-width: 480px) {
+  /* 모바일 화면 크기 */
+  span {
+      font-size: 14px;
+  }}
+
 .a {
   animation: movemove 3s infinite;
   animation-delay: 0s; 
