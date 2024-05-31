@@ -4,6 +4,7 @@ body {
   justify-content: center; /* 수평 가운데 정렬 */
   align-items: center; /* 수직 가운데 정렬 */
   height: 100vh; /* 화면 전체 높이만큼 요소를 채우도록 설정 */
+  flex-direction: column;
   
 }
 
@@ -47,7 +48,7 @@ span {
 @media screen and (max-width: 480px) {
   /* 모바일 화면 크기 */
   span {
-      font-size: 14px;
+      font-size: 3vw;
   }}
 
 .a {
