@@ -20,7 +20,7 @@ document.addEventListener('mousemove', function(e) {
             span.style.animationPlayState = 'running';
             span.style.fontWeight = 'bold'; // 텍스트를 볼드로 설정
             span.style.transform = 'scale(1)'; // 원래 크기로 설정
-            span.style.letterSpacing = 30 + "px";
+            span.style.letterSpacing = 10 + "px";
             span.style.lineHeight = 5;
             span.setAttribute('data-active', 'true'); // 활성화 상태를 표시
         } else {
