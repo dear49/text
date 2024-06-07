@@ -1,26 +1,24 @@
 body {
-  font-size: 0.765vw; /* 원하는 폰트 크기로 설정하세요 */
+  font-size: 10px; /* 원하는 폰트 크기로 설정하세요 */
   display: flex;
   justify-content: center; /* 수평 가운데 정렬 */
   align-items: center; /* 수직 가운데 정렬 */
   height: 100vh; /* 화면 전체 높이만큼 요소를 채우도록 설정 */
-  flex-direction: column;
   
 }
-
-.fade-out {
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0.5; /* 원하는 투명도로 조절하세요 */
-}
-
 
 .container > div {
   margin: 0px;
 }
 
 p {
+  display: flex;
   line-height: 3;
   letter-spacing: 0; /* 자간을 0으로 설정 */
+}
+
+span {
+  transition: all 1s ease-out;
 }
 
 @keyframes movemove {
@@ -38,19 +36,18 @@ p {
   }
 }
 
+@media screen and (max-width: 480px) {
+  /* 모바일 화면 크기 */
+  body {
+      font-size: 6px;
+  }}
+
 /* 각 클래스에 애니메이션을 적용 */
 span {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
-
-@media screen and (max-width: 480px) {
-  /* 모바일 화면 크기 */
-  span {
-      font-size: 3vw;
-  }}
-
 .a {
   animation: movemove 3s infinite;
   animation-delay: 0s; 
