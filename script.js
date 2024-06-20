@@ -1,3 +1,14 @@
+const group = document.querySelector("#group"); // id가 group인 아이를 찾기
+const original = document.querySelector("#original"); // id가 original인 아이를 찾기
+
+const count = 10; // 반복하고 싶은, 즉 복사하고 싶은 횟수
+for( let i = 0; i < count; i = i + 1 ) {
+    const new_p = document.createElement("p"); // 새로운 <p>요소를 만들 것인데..
+    new_p.innerHTML = original.innerHTML; // 새로운 <p>요소에 들어가는 HTML 내용은, original의 HTML 내용이 될 것임.
+
+    group.appendChild( new_p ); // group에 새로운 <p>요소를 포함하기!
+}
+
 document.addEventListener('mousemove', function(e) {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
