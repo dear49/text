@@ -1,10 +1,19 @@
-body {
-  font-size: 10px; /* 원하는 폰트 크기로 설정하세요 */
+* { /* 기본으로 생성되는 여백을 초기화하기! */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container { /* 부모 요소의 크기를 화면 사이즈로 고정하고, 넘치는 텍스트는 숨기기! */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: center; /* 수평 가운데 정렬 */
-  align-items: center; /* 수직 가운데 정렬 */
-  height: 100vh; /* 화면 전체 높이만큼 요소를 채우도록 설정 */
-  
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .container > div {
@@ -14,7 +23,7 @@ body {
 p {
   display: flex;
   line-height: 3;
-  letter-spacing: 0; /* 자간을 0으로 설정 */
+  letter-spacing: 0;
 }
 
 span {
@@ -36,86 +45,101 @@ span {
   }
 }
 
-@media screen and (max-width: 480px) {
-  /* 모바일 화면 크기 */
-  body {
-      font-size: 6px;
-  }}
-
-/* 각 클래스에 애니메이션을 적용 */
 span {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
+
 .a {
   animation: movemove 3s infinite;
   animation-delay: 0s; 
-  animation-timing-function: ease-in-out;/* 딜레이 없음 */
+  animation-timing-function: ease-in-out;
 }
 
 .b {
   animation: movemove 3s infinite;
   animation-delay: 0.3s; 
-  animation-timing-function: ease-in-out;/* 딜레이 없음 */
+  animation-timing-function: ease-in-out;
 }
 
 .c {
   animation: movemove 3s infinite;
   animation-delay: 0.6s; 
-  animation-timing-function: ease-in-out;/* 0.2초 딜레이 */
+  animation-timing-function: ease-in-out;
 }
 
 .d {
   animation: movemove 3s infinite ;
   animation-delay: 0.9s; 
-  animation-timing-function: ease-in-out;/* 0.4초 딜레이 */
+  animation-timing-function: ease-in-out;
 }
 
 .e {
   animation: movemove 3s infinite ;
   animation-delay: 1.2s; 
-  animation-timing-function: ease-in-out;/* 0.4초 딜레이 */
+  animation-timing-function: ease-in-out;
 }
 
 .f {
   animation: movemove 3s infinite ;
   animation-delay: 1.5s; 
-  animation-timing-function: ease-in-out;/* 0.4초 딜레이 */
+  animation-timing-function: ease-in-out;
 }
 
 .g {
   animation: movemove 3s infinite ;
   animation-delay: 1.8s; 
-  animation-timing-function: ease-in-out;/* 0.4초 딜레이 */
+  animation-timing-function: ease-in-out;
 }
 
 .h {
   animation: movemove 3s infinite ;
   animation-delay: 2.1s; 
-  animation-timing-function: ease-in-out;/* 0.4초 딜레이 */
+  animation-timing-function: ease-in-out;
 }
 
 .i {
   animation: movemove 3s infinite ;
   animation-delay: 2.4s; 
-  animation-timing-function: ease-in-out;/* 0.4초 딜레이 */
+  animation-timing-function: ease-in-out;
 }
 
 .j {
   animation: movemove 3s infinite ;
   animation-delay: 2.7s; 
-  animation-timing-function: ease-in-out;/* 0.4초 딜레이 */
+  animation-timing-function: ease-in-out;
 }
 
 .k {
   animation: movemove 3s infinite ;
   animation-delay: 3.0s; 
-  animation-timing-function: ease-in-out;/* 0.4초 딜레이 */
+  animation-timing-function: ease-in-out;
 }
 
 .a, .b, .c, .d, .e, .f, .g, .h, .i, .j, .k {
   animation: movemove 3s infinite;
   animation-timing-function: ease-in-out;
   animation-play-state: paused; 
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 6px;
+  }
+
+  .container {
+    align-items: center; /* 중앙 정렬 */
+    justify-content: center; /* 중앙 정렬 */
+    padding-top: 0; /* 패딩 제거 */
+  }
+
+  span {
+    display: inline-block; /* 인라인 블록으로 변경 */
+    margin: 2px 0;
+  }
+
+  #group {
+    text-align: center; /* 텍스트 중앙 정렬 */
+  }
 }
