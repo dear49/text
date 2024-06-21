@@ -26,7 +26,7 @@ document.addEventListener('mousemove', function(e) {
         // span.style.transition = 'transform 0.3s, font-weight 0.3s';
         span.style.transition = 'all 0.3s';
 
-        if (distance < 75) {
+        if (distance < 40) {
             // 애니메이션 활성화 상태를 유지
             span.style.animationPlayState = 'running';
             span.style.fontWeight = 'bold'; // 텍스트를 볼드로 설정
